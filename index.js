@@ -1,8 +1,8 @@
 import express from "express";
-import nodemailer from "nodemailer"
-import cors from "cors"
-import dotenv from "dotenv"
-dotenv.config()
+import nodemailer from "nodemailer";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -20,7 +20,7 @@ app.post("/api/contact", async (req, res) => {
   try {
     // transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail", 
+      service: "gmail",
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
